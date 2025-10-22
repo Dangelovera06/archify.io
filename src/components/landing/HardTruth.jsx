@@ -54,7 +54,7 @@ export default function HardTruth() {
             Now, our proven system can do everything for you.
           </p>
 
-          <div className="space-y-6 mb-12">
+          <div className="space-y-8 mb-12">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -62,17 +62,17 @@ export default function HardTruth() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-2xl text-left bg-white/[0.02] border border-white/10 backdrop-blur-sm"
+                className="p-8 rounded-2xl text-left bg-white/[0.02] border border-white/10 backdrop-blur-sm"
               >
                 <img 
                   src={benefit.icon} 
                   alt="" 
-                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90 mb-4"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain opacity-90 mb-6"
                 />
-                <p className="text-base sm:text-lg font-bold text-yellow-400 mb-2">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-400 mb-3">
                   {benefit.title}
                 </p>
-                <p className="text-sm sm:text-base text-white/80">
+                <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
