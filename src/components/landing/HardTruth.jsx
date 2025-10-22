@@ -1,11 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { XCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle, Sparkles } from "lucide-react";
 
-const problems = [
-  "Posting random before-and-after photos doesn't create trust.",
-  "Boosting ads without strategy wastes thousands.",
-  "Patients don't choose the dentist who shouts the loudest — they choose the one they trust the most."
+const benefits = [
+  {
+    title: "YOU DON'T NEED YEARS OF MARKETING EXPERIENCE",
+    description: "Building a predictable full-arch practice doesn't require marketing expertise or years in the industry—it's about following a proven system and using modern tools to reach ready-to-buy patients."
+  },
+  {
+    title: "YOU DON'T NEED TO BE ON CAMERA",
+    description: "Archify.io lets you grow your implant practice without ever appearing on video. Our content templates and ad strategies work without you needing to show your face."
+  },
+  {
+    title: "YOU DON'T NEED SOCIAL MEDIA EXPERIENCE",
+    description: "The Full-Arch Blueprint gives complete beginners a clear path from zero followers to 20+ monthly consults. A step-by-step system shows you every post, ad, and strategy—proven by practices that added $500K+ in just 90 days."
+  },
+  {
+    title: "YOU DON'T NEED A HUGE FOLLOWING",
+    description: "When you join Archify.io, you'll instantly learn how to reach motivated implant patients who are already searching, even with no followers, no ad experience, and no guesswork."
+  }
 ];
 
 export default function HardTruth() {
@@ -19,18 +32,18 @@ export default function HardTruth() {
           viewport={{ once: true }}
         >
           <div className="inline-flex items-center gap-3 mb-8">
-            <AlertTriangle className="w-6 h-6 text-yellow-400" />
+            <Sparkles className="w-6 h-6 text-yellow-400" />
             <span className="text-sm text-yellow-400 uppercase tracking-wider">
-              The Hard Truth
+              Good News
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-white">
-            Most Practices Fail on Social Media. Here's Why.
+            You Don't Need Any of This to Start
           </h2>
 
           <div className="space-y-6 mb-12">
-            {problems.map((problem, index) => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -39,17 +52,22 @@ export default function HardTruth() {
                 viewport={{ once: true }}
                 className="flex items-start gap-4 p-6 rounded-2xl text-left bg-white/[0.02] border border-white/10 backdrop-blur-sm"
               >
-                <XCircle className="w-6 h-6 flex-shrink-0 mt-1 text-red-400" />
-                <p className="text-lg text-white/90">
-                  {problem}
-                </p>
+                <CheckCircle className="w-6 h-6 flex-shrink-0 mt-1 text-green-400" />
+                <div>
+                  <p className="text-base sm:text-lg font-bold text-yellow-400 mb-2">
+                    {benefit.title}
+                  </p>
+                  <p className="text-sm sm:text-base text-white/80">
+                    {benefit.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
 
           <div className="p-8 rounded-3xl bg-white/[0.02] border-2 border-yellow-400/30 backdrop-blur-sm">
             <p className="text-lg text-white/90">
-              That's why we built <span className="text-yellow-400 font-bold">Archify.io</span>: a proven system that makes patients trust you first — and book with you instead of the practice down the street.
+              That's why we built <span className="text-yellow-400 font-bold">Archify.io</span>: a complete system that works even if you're starting from scratch—putting qualified patients on your calendar week after week.
             </p>
           </div>
         </motion.div>
