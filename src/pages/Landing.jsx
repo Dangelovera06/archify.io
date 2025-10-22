@@ -3,6 +3,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 
 import Hero from "../components/landing/Hero";
 import HardTruth from "../components/landing/HardTruth";
+import WhatHappens from "../components/landing/WhatHappens";
 import SocialProof from "../components/landing/SocialProof";
 import VideoSlider from "../components/landing/VideoSlider";
 import EmotionalCore from "../components/landing/EmotionalCore";
@@ -42,6 +43,7 @@ export default function Landing() {
       <Hero />
       <Testimonials />
       <HardTruth />
+      <WhatHappens />
       <SocialProof />
       <VideoSlider />
       <EmotionalCore />

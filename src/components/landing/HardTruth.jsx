@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 
 const benefits = [
   {
@@ -78,6 +78,33 @@ export default function HardTruth() {
               </motion.div>
             ))}
           </div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <a
+              href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                if (window.fbq) {
+                  window.fbq('track', 'Lead', {
+                    content_name: 'Benefits Section CTA Click',
+                    content_category: 'CTA Button'
+                  });
+                }
+              }}
+              className="inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 text-black font-bold text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 hover:scale-105"
+            >
+              <span>Get Started Now</span>
+              <ArrowRight className="w-6 h-6" />
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
