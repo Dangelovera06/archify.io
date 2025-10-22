@@ -148,7 +148,7 @@ export default function Hero() {
               <Shield className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 text-yellow-400 animate-pulse" />
               <div className="text-left">
                 <div className="font-extrabold text-xl sm:text-2xl md:text-3xl text-white mb-1">
-                  30-Day Money Back Guarantee
+                  Money Back Guarantee
                 </div>
                 <div className="text-sm sm:text-base md:text-lg text-yellow-200/90 font-medium">
                   Not satisfied? Get a full refund, no questions asked.

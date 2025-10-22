@@ -42,29 +42,32 @@ export default function Blueprint() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="space-y-12 md:space-y-16 mb-12 md:mb-16">
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="relative"
+              className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8"
             >
-              <div className="absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold bg-yellow-400 text-black">
-                {index + 1}
+              {/* Large Number with Icon */}
+              <div className="flex-shrink-0 relative">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center shadow-2xl shadow-yellow-500/30">
+                  <step.icon className="w-10 h-10 sm:w-12 sm:h-12 text-black" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-white text-black flex items-center justify-center text-xl font-black shadow-lg">
+                  {index + 1}
+                </div>
               </div>
 
-              <div className="p-6 sm:p-8 rounded-3xl text-center h-full pt-10 sm:pt-12 bg-white/[0.02] border border-white/10 backdrop-blur-sm">
-                <div className="inline-flex p-3 sm:p-4 rounded-full mb-4 sm:mb-6 bg-white/[0.05]">
-                  <step.icon className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400" />
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3 sm:mb-4 bg-gradient-to-r from-white via-yellow-200 to-white bg-clip-text text-transparent">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-white/70">
+                <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium leading-relaxed">
                   {step.description}
                 </p>
               </div>
