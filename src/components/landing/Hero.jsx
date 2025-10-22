@@ -47,33 +47,6 @@ export default function Hero() {
 
   return (
     <BeamsBackground intensity="medium">
-      {/* Floating Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4">
-          {/* Logo with Rounded Corners */}
-          <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Archify.io" className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl shadow-lg" />
-            <span className="text-lg sm:text-xl font-bold tracking-tight text-white">Archify.io</span>
-          </div>
-
-          {/* Rainbow CTA Button */}
-          <RainbowButton
-            onClick={(e) => {
-              if (window.fbq) {
-                window.fbq('track', 'Lead', {
-                  content_name: 'Header CTA Click',
-                  content_category: 'CTA Button'
-                });
-              }
-              window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
-            }}
-            className="text-white"
-          >
-            Join Now
-          </RainbowButton>
-        </div>
-      </header>
-
       {/* Main Hero Content */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 pt-24 sm:pt-28">
         <div className="mx-auto max-w-5xl text-center">
@@ -121,17 +94,14 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* CTA Button with Yellow Glow */}
+          {/* Rainbow CTA Button */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col items-center gap-4 md:gap-5 mb-6 md:mb-8"
           >
-            <a
-              href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-              target="_blank"
-              rel="noopener noreferrer"
+            <RainbowButton
               onClick={() => {
                 if (window.fbq) {
                   window.fbq('track', 'Lead', {
@@ -139,30 +109,12 @@ export default function Hero() {
                     content_category: 'CTA Button'
                   });
                 }
+                window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
               }}
-              className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"
-              style={{
-                background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
-                boxShadow: "0 1px 0 rgba(0,0,0,.08)"
-              }}
+              className="text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 h-auto"
             >
-              <span 
-                className="pointer-events-none absolute inset-0 rounded-xl blur-[10px] opacity-40"
-                style={{
-                  background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
-                }}
-              />
-              <span 
-                className="pointer-events-none absolute inset-0 rounded-xl blur-[10px]"
-                style={{
-                  background: "radial-gradient(50% 50% at 50% 50%, #ffd999 0%, rgba(0,0,0,0) 100%)"
-                }}
-              />
-              <span className="relative font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap flex items-center justify-center gap-2">
-                <span>Get the Blueprint. Get the Patients.</span>
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
-              </span>
-            </a>
+              Get the Blueprint. Get the Patients.
+            </RainbowButton>
             
             {/* Countdown Timer */}
             <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg">
@@ -185,24 +137,24 @@ export default function Hero() {
             <PricingBadge />
           </motion.div>
 
-          {/* Money Back Guarantee */}
+          {/* Money Back Guarantee - EMPHASIZED */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mb-6 md:mb-8"
           >
-            <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-sm">
-              <Shield className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 text-yellow-400" />
+            <div className="inline-flex items-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border-2 border-yellow-400/30 backdrop-blur-sm shadow-2xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transition-shadow">
+              <Shield className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 text-yellow-400 animate-pulse" />
               <div className="text-left">
-                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
-                  Money Back Guarantee
+                <div className="font-extrabold text-xl sm:text-2xl md:text-3xl text-white mb-1">
+                  30-Day Money Back Guarantee
                 </div>
-                <div className="text-xs sm:text-sm text-white/50">
+                <div className="text-sm sm:text-base md:text-lg text-yellow-200/90 font-medium">
                   Not satisfied? Get a full refund, no questions asked.
                 </div>
               </div>
-              <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 text-yellow-400" />
+              <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 text-yellow-400" />
             </div>
           </motion.div>
         </div>
