@@ -78,12 +78,6 @@ export default function HardTruth() {
               </motion.div>
             ))}
           </div>
-
-          <div className="p-8 rounded-3xl bg-white/[0.02] border-2 border-yellow-400/30 backdrop-blur-sm">
-            <p className="text-lg text-white/90">
-              That's why we built <span className="text-yellow-400 font-bold">Archify.io</span>: a complete system that works even if you're starting from scratch—putting qualified patients on your calendar week after week.
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
