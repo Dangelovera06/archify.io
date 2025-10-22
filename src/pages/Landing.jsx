@@ -34,7 +34,6 @@ export default function Landing() {
               }
               window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
             }}
-            className="text-white"
           >
             Join Now
           </RainbowButton>

@@ -111,7 +111,7 @@ export default function Hero() {
                 }
                 window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
               }}
-              className="text-white text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 h-auto"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 h-auto"
             >
               Get the Blueprint. Get the Patients.
             </RainbowButton>
