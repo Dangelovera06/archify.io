@@ -6,22 +6,22 @@ const benefits = [
   {
     title: "YOU DON'T NEED YEARS OF MARKETING EXPERIENCE",
     description: "Building a predictable full-arch practice doesn't require marketing expertise or years in the industry—it's about following a proven system and using modern tools to reach ready-to-buy patients.",
-    icon: "/ads.png"
+    icon: "/website icons/21.png"
   },
   {
     title: "YOU DON'T NEED TO BE ON CAMERA",
     description: "Archify.io lets you grow your implant practice without ever appearing on video. Our content templates and ad strategies work without you needing to show your face.",
-    icon: "/docs needed.png"
+    icon: "/website icons/22.png"
   },
   {
     title: "YOU DON'T NEED SOCIAL MEDIA EXPERIENCE",
     description: "The Full-Arch Blueprint gives complete beginners a clear path from zero followers to 20+ monthly consults. A step-by-step system shows you every post, ad, and strategy—proven by practices that added $500K+ in just 90 days.",
-    icon: "/rev avrg.png"
+    icon: "/website icons/23.png"
   },
   {
     title: "YOU DON'T NEED A HUGE FOLLOWING",
     description: "When you join Archify.io, you'll instantly learn how to reach motivated implant patients who are already searching, even with no followers, no ad experience, and no guesswork.",
-    icon: "/40 m.png"
+    icon: "/website icons/24.png"
   }
 ];
 
@@ -62,21 +62,19 @@ export default function HardTruth() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative flex items-start gap-4 p-6 pt-8 rounded-2xl text-left bg-white/[0.02] border border-white/10 backdrop-blur-sm"
+                className="p-6 rounded-2xl text-left bg-white/[0.02] border border-white/10 backdrop-blur-sm"
               >
                 <img 
                   src={benefit.icon} 
                   alt="" 
-                  className="absolute top-4 left-4 w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90"
+                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain opacity-90 mb-4"
                 />
-                <div className="ml-16 sm:ml-20">
-                  <p className="text-base sm:text-lg font-bold text-yellow-400 mb-2">
-                    {benefit.title}
-                  </p>
-                  <p className="text-sm sm:text-base text-white/80">
-                    {benefit.description}
-                  </p>
-                </div>
+                <p className="text-base sm:text-lg font-bold text-yellow-400 mb-2">
+                  {benefit.title}
+                </p>
+                <p className="text-sm sm:text-base text-white/80">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
