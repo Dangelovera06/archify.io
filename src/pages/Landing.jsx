@@ -6,7 +6,6 @@ import HardTruth from "../components/landing/HardTruth";
 import SocialProof from "../components/landing/SocialProof";
 import VideoSlider from "../components/landing/VideoSlider";
 import EmotionalCore from "../components/landing/EmotionalCore";
-import Proof from "../components/landing/Proof";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
@@ -46,7 +45,6 @@ export default function Landing() {
       <SocialProof />
       <VideoSlider />
       <EmotionalCore />
-      <Proof />
       <Blueprint />
       <FinalClose />
 
