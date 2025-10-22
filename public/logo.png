@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>cursor-ai-chat-attachments</BucketName><RequestId>NATTSPCEDT5GV3AR</RequestId><HostId>3OePYteXaAZ+COsYYXkjZ4JymR/KlCZE9tgNnOd0Bqpgn/WU6IsD5sHfOxk3CWqW0ZyvM+xNnuU=</HostId></Error>

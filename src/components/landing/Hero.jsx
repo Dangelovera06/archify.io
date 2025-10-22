@@ -46,31 +46,41 @@ export default function Hero() {
 
   return (
     <BeamsBackground intensity="medium">
-      {/* Navigation Header */}
-      <header className="relative z-10">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 md:px-8">
+      {/* Floating Navigation Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4">
+          {/* Logo in Rounded Square */}
           <div className="flex items-center gap-3">
-            <div className="h-6 w-6 rounded-full bg-white" />
-            <span className="text-lg font-semibold tracking-tight text-white">Archify.io</span>
+            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 p-1.5 shadow-lg shadow-yellow-500/20">
+              <img src="/logo.png" alt="Archify.io" className="h-full w-full object-contain" />
+            </div>
+            <span className="text-lg sm:text-xl font-bold tracking-tight text-white">Archify.io</span>
           </div>
 
-          <nav className="hidden items-center gap-8 text-sm/6 text-white/80 md:flex">
-            {['About', 'How It Works', 'Success Stories', 'Pricing'].map((item) => (
-              <a key={item} className="hover:text-white transition-colors" href="#">{item}</a>
-            ))}
-          </nav>
-
-          <div className="hidden items-center gap-3 md:flex">
-            <button className="rounded-full px-4 py-2 text-sm text-white/80 hover:text-white transition-colors">Sign in</button>
-            <button className="rounded-full bg-white px-4 py-2 text-sm font-medium text-black shadow-sm transition hover:bg-white/90">Request Demo</button>
-          </div>
-
-          <button className="md:hidden rounded-full bg-white/10 px-3 py-2 text-sm text-white">Menu</button>
+          {/* CTA Button with Golden Glow */}
+          <a
+            href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/30"
+            style={{
+              background: "linear-gradient(135deg, #ffd999 0%, #ffb433 50%, #ffa201 100%)"
+            }}
+          >
+            <span 
+              className="pointer-events-none absolute inset-0 rounded-xl blur-md opacity-50"
+              style={{
+                background: "radial-gradient(circle at center, #ffc766 0%, transparent 70%)"
+              }}
+            />
+            <span className="relative">Join Now</span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative" />
+          </a>
         </div>
       </header>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 flex min-h-[calc(100vh-88px)] items-center justify-center px-6 py-16">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-16 pt-24 sm:pt-28">
         <div className="mx-auto max-w-5xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
