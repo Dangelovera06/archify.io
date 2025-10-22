@@ -51,8 +51,8 @@ export default function Hero() {
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4">
           {/* Logo in Rounded Square */}
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 p-1.5 shadow-lg shadow-yellow-500/20">
-              <img src="/logo.png" alt="Archify.io" className="h-full w-full object-contain" />
+            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl overflow-hidden bg-gradient-to-br from-yellow-400 to-yellow-600 p-1 shadow-lg shadow-yellow-500/20 flex items-center justify-center">
+              <img src="/logo.png" alt="Archify.io" className="h-full w-full object-cover" />
             </div>
             <span className="text-lg sm:text-xl font-bold tracking-tight text-white">Archify.io</span>
           </div>
