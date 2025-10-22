@@ -60,6 +60,14 @@ export default function Hero() {
             href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (window.fbq) {
+                window.fbq('track', 'Lead', {
+                  content_name: 'Header CTA Click',
+                  content_category: 'CTA Button'
+                });
+              }
+            }}
             className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/30"
             style={{
               background: "linear-gradient(135deg, #ffd999 0%, #ffb433 50%, #ffa201 100%)"
@@ -135,6 +143,14 @@ export default function Hero() {
               href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                if (window.fbq) {
+                  window.fbq('track', 'Lead', {
+                    content_name: 'Main Hero CTA Click',
+                    content_category: 'CTA Button'
+                  });
+                }
+              }}
               className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105"
               style={{
                 background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
