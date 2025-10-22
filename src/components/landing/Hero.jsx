@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, CheckCircle } from "lucide-react";
 import { BeamsBackground } from "@/components/ui/beams-background";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import PricingBadge from './PricingBadge';
 
 export default function Hero() {
@@ -55,33 +56,21 @@ export default function Hero() {
             <span className="text-lg sm:text-xl font-bold tracking-tight text-white">Archify.io</span>
           </div>
 
-          {/* CTA Button with Golden Glow */}
-          <a
-            href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => {
+          {/* Rainbow CTA Button */}
+          <RainbowButton
+            onClick={(e) => {
               if (window.fbq) {
                 window.fbq('track', 'Lead', {
                   content_name: 'Header CTA Click',
                   content_category: 'CTA Button'
                 });
               }
+              window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
             }}
-            className="relative inline-flex items-center justify-center gap-2 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-black transition-all hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/30"
-            style={{
-              background: "linear-gradient(135deg, #ffd999 0%, #ffb433 50%, #ffa201 100%)"
-            }}
+            className="text-white"
           >
-            <span 
-              className="pointer-events-none absolute inset-0 rounded-xl blur-md opacity-50"
-              style={{
-                background: "radial-gradient(circle at center, #ffc766 0%, transparent 70%)"
-              }}
-            />
-            <span className="relative">Join Now</span>
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative" />
-          </a>
+            Join Now
+          </RainbowButton>
         </div>
       </header>
 
