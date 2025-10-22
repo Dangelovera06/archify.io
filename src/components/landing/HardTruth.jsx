@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const benefits = [
   {
@@ -87,10 +88,7 @@ export default function HardTruth() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <a
-              href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
-              target="_blank"
-              rel="noopener noreferrer"
+            <RainbowButton
               onClick={() => {
                 if (window.fbq) {
                   window.fbq('track', 'Lead', {
@@ -98,12 +96,12 @@ export default function HardTruth() {
                     content_category: 'CTA Button'
                   });
                 }
+                window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
               }}
-              className="inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 text-black font-bold text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 hover:scale-105"
+              className="text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 h-auto"
             >
-              <span>Get Started Now</span>
-              <ArrowRight className="w-6 h-6" />
-            </a>
+              Get the Blueprint. Get the Patients.
+            </RainbowButton>
           </motion.div>
         </motion.div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
 import Hero from "../components/landing/Hero";
@@ -12,15 +12,58 @@ import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
 
 export default function Landing() {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 2);
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = () => {
+    const totalHours = (timeLeft.days * 24) + timeLeft.hours;
+    return `${totalHours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
+  };
+
   return (
     <div className="min-h-screen overflow-x-hidden w-full bg-neutral-950">
       {/* Floating Navigation Header - Visible Throughout Site */}
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 gap-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src="/logo.png" alt="Archify.io" className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl shadow-lg" />
             <span className="text-lg sm:text-xl font-bold tracking-tight text-white">Archify.io</span>
+          </div>
+
+          {/* Timer */}
+          <div className="hidden md:flex items-center gap-2 text-sm">
+            <span className="font-semibold text-white/80">
+              Offer ends:
+            </span>
+            <span className="font-extrabold tabular-nums bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
+              {formatTime()}
+            </span>
           </div>
 
           {/* Rainbow CTA Button */}
