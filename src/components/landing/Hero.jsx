@@ -88,11 +88,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-10 mb-8 md:mb-10 max-w-4xl mx-auto w-full"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-yellow-500/20 ring-1 ring-white/10">
+            <div className="relative">
               <img 
-                src="/image lp.png" 
+                src="/FIXED SIZE IM.png" 
                 alt="Archify.io Landing Page" 
-                className="w-full h-auto"
+                className="w-full h-auto opacity-100"
               />
             </div>
           </motion.div>
