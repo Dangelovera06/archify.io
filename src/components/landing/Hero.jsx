@@ -90,7 +90,7 @@ export default function Hero() {
           >
             <div className="relative">
               <img 
-                src="/FIXED SIZE IM.png" 
+                src="/fixed-size-im.png" 
                 alt="Archify.io Landing Page" 
                 className="w-full h-auto opacity-100"
               />
