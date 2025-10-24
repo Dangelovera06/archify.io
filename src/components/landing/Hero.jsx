@@ -66,11 +66,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl text-white"
           >
-            The Proven Blueprint for{' '}
+            The Official Play Book That Launches{' '}
             <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
-              Full-Arch Growth
+              Full-Arch growth
             </span>
-            {' '}— Launch in Under 7 Days
           </motion.h1>
           
           <motion.p 
