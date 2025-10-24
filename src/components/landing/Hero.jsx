@@ -82,7 +82,7 @@ export default function Hero() {
             Turn social media into 20+ implant consults in 14 days — and add $500K+ in predictable revenue
           </motion.p>
 
-          {/* VSL Video */}
+          {/* Landing Page Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -90,7 +90,11 @@ export default function Hero() {
             className="mt-10 mb-8 md:mb-10 max-w-4xl mx-auto w-full"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-yellow-500/20 ring-1 ring-white/10">
-              <wistia-player media-id="wnxtau4o6k" aspect="1.7777777777777777"></wistia-player>
+              <img 
+                src="/image lp.png" 
+                alt="Archify.io Landing Page" 
+                className="w-full h-auto"
+              />
             </div>
           </motion.div>
 
