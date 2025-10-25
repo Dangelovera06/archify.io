@@ -60,18 +60,22 @@ export default function Hero() {
             </span>
           </motion.div>
           
-          <motion.h1 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl text-white"
           >
-            The{' '}
-            <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
-              $100K Implant Funnel
-            </span>
-            : The Funnel Full-Arch Practices Use to Book 3–5 Cases Monthly
-          </motion.h1>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white/90">
+              The{' '}
+              <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
+                $100K Implant Funnel
+              </span>
+              :
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl text-white">
+              The Funnel Full-Arch Practices Use to Book 3–5 Cases Monthly
+            </h1>
+          </motion.div>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
