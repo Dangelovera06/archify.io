@@ -78,7 +78,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-5 max-w-2xl text-balance text-lg text-white/80 md:text-xl"
           >
-            Turn social media into 20+ implant consults in 14 days — and add $500K+ in predictable revenue
+            A 30-Day Precision System to Pre-Sell Arches, Elevate Authority, and Turn Social Media Into a Booking Engine — Even If You've Never Gone Viral
           </motion.p>
 
           {/* Landing Page Image */}
