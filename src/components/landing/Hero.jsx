@@ -65,14 +65,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 text-white/90">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-white/90">
               The{' '}
               <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
                 $100K Implant Funnel
               </span>
               :
             </div>
-            <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl text-white">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
               The Funnel Full-Arch Practices Use to Book 3–5 Cases Monthly
             </h1>
           </motion.div>
