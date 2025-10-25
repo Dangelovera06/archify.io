@@ -70,7 +70,7 @@ export default function Hero() {
             <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
               $100K Implant Funnel
             </span>
-            : The Underground Playbook Full-Arch Practices Use to Book 3–5 Cases Monthly
+            : The Funnel Full-Arch Practices Use to Book 3–5 Cases Monthly
           </motion.h1>
           
           <motion.p 
