@@ -65,7 +65,6 @@ export default function Landing() {
               }
               window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
             }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
           >
             Join Now
           </RainbowButton>
