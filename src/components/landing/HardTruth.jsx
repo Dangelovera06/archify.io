@@ -98,7 +98,7 @@ export default function HardTruth() {
                 }
                 window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
               }}
-              className="text-base sm:text-lg md:text-xl px-12 sm:px-16 md:px-24 py-7 sm:py-8 md:py-10 h-auto"
+              className="text-base sm:text-lg md:text-xl px-10 sm:px-14 md:px-20 py-6 sm:py-7 md:py-9 h-auto"
             >
               Yes, Get It!
             </RainbowButton>

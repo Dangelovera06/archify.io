@@ -86,7 +86,7 @@ export default function Blueprint() {
             href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center gap-3 px-12 sm:px-16 md:px-20 py-6 sm:py-7 md:py-8 rounded-xl bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 text-black font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.5),0_0_40px_rgba(250,204,21,0.3),0_0_60px_rgba(250,204,21,0.2)]"
+            className="relative inline-flex items-center gap-3 px-10 sm:px-14 md:px-20 py-6 sm:py-7 md:py-9 rounded-xl bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 text-black font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.5),0_0_40px_rgba(250,204,21,0.3),0_0_60px_rgba(250,204,21,0.2)]"
           >
             <span 
               className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/40 via-transparent to-transparent"
