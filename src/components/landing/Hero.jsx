@@ -158,30 +158,24 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-6 md:mb-8 px-4"
+            className="mb-6 md:mb-8 px-4 max-w-xl mx-auto"
           >
-            <div className="inline-flex items-center gap-3 sm:gap-4 md:gap-6 px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-400/10 to-green-500/10 border-2 border-green-400/40 backdrop-blur-sm shadow-xl shadow-green-500/20">
-              <div className="flex items-center gap-3 sm:gap-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-400/20 flex items-center justify-center">
-                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-bold text-sm sm:text-base md:text-lg text-white whitespace-nowrap">
-                      Learn in Half a Day
-                    </div>
-                  </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-6 md:px-10 py-4 sm:py-5 md:py-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-400/10 to-green-500/10 border border-green-400/40 sm:border-2 backdrop-blur-sm shadow-lg sm:shadow-xl shadow-green-500/20">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-green-400/20 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-400" />
                 </div>
-                <div className="hidden sm:block w-px h-8 bg-green-400/30" />
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-400/20 flex items-center justify-center">
-                    <Video className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-bold text-sm sm:text-base md:text-lg text-white whitespace-nowrap">
-                      Film in 24 Hours
-                    </div>
-                  </div>
+                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
+                  Learn in Half a Day
+                </div>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-green-400/30" />
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-green-400/20 flex items-center justify-center flex-shrink-0">
+                  <Video className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-400" />
+                </div>
+                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
+                  Make First Ad in 24hr
                 </div>
               </div>
             </div>
