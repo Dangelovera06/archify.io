@@ -106,7 +106,7 @@ export default function Hero() {
                 }
                 window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
               }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
+              className="w-full sm:w-auto text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
             >
               Yes, Get It!
             </RainbowButton>
@@ -137,19 +137,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-6 md:mb-8"
+            className="mb-6 md:mb-8 px-4"
           >
-            <div className="inline-flex items-center gap-4 px-8 py-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border-2 border-yellow-400/30 backdrop-blur-sm shadow-2xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transition-shadow">
-              <Shield className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 text-yellow-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-xl md:rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border border-yellow-400/30 md:border-2 backdrop-blur-sm shadow-lg md:shadow-2xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transition-shadow">
+              <Shield className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 flex-shrink-0 text-yellow-400" />
               <div className="text-left">
-                <div className="font-extrabold text-xl sm:text-2xl md:text-3xl text-white mb-1">
+                <div className="font-extrabold text-base sm:text-lg md:text-2xl lg:text-3xl text-white mb-0.5 md:mb-1">
                   Money Back Guarantee
                 </div>
-                <div className="text-sm sm:text-base md:text-lg text-yellow-200/90 font-medium">
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg text-yellow-200/90 font-medium">
                   Not satisfied? Get a full refund, no questions asked.
                 </div>
               </div>
-              <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 text-yellow-400" />
+              <CheckCircle className="hidden sm:block w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex-shrink-0 text-yellow-400" />
             </div>
           </motion.div>
         </div>

@@ -37,52 +37,6 @@ export default function WhatYouGet() {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Ad Mastery */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative p-8 rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/20 backdrop-blur-sm"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
-            <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mb-6 shadow-xl shadow-yellow-500/20">
-                <Video className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-                Ad Mastery Content
-              </h3>
-              <p className="text-lg text-white/80 leading-relaxed">
-                Step-by-step video training on creating high-converting social authority ads that position your practice as the trusted expert in your market.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Playbook */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative p-8 rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/20 backdrop-blur-sm"
-          >
-            <div className="absolute top-0 left-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
-            <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center mb-6 shadow-xl shadow-yellow-500/20">
-                <BookOpen className="w-8 h-8 text-black" />
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-                The Full-Arch Precision Playbook
-              </h3>
-              <p className="text-lg text-white/80 leading-relaxed">
-                The complete Four Pillars system to pre-sell arches and book 3–5 cases in 30 days without discounts, insurance battles, or referrals.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-
         {/* Detailed Features */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -91,11 +45,11 @@ export default function WhatYouGet() {
           viewport={{ once: true }}
           className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] border border-white/20 backdrop-blur-sm"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center text-white">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center text-white">
             Inside The Playbook
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {playbookFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -103,14 +57,14 @@ export default function WhatYouGet() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 group"
+                className="flex items-start gap-3 group"
               >
-                <div className="flex-shrink-0 mt-1">
-                  <div className="w-6 h-6 rounded-full bg-yellow-400/20 flex items-center justify-center group-hover:bg-yellow-400/30 transition-colors">
-                    <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+                <div className="flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-yellow-400/20 flex items-center justify-center group-hover:bg-yellow-400/30 transition-colors">
+                    <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-yellow-400" />
                   </div>
                 </div>
-                <p className="text-base text-white/80 leading-relaxed">
+                <p className="text-sm md:text-base text-white/80 leading-relaxed">
                   {feature}
                 </p>
               </motion.div>
@@ -130,7 +84,7 @@ export default function WhatYouGet() {
             href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 text-black font-bold transition-all hover:scale-105 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 shadow-[0_0_20px_rgba(250,204,21,0.5),0_0_40px_rgba(250,204,21,0.3),0_0_60px_rgba(250,204,21,0.2)]"
+            className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 text-black font-bold transition-all hover:scale-105 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 shadow-[0_0_20px_rgba(250,204,21,0.5),0_0_40px_rgba(250,204,21,0.3),0_0_60px_rgba(250,204,21,0.2)]"
           >
             <span 
               className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/40 via-transparent to-transparent"
