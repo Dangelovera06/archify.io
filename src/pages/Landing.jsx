@@ -10,6 +10,7 @@ import EmotionalCore from "../components/landing/EmotionalCore";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
+import WhatYouGet from "../components/landing/WhatYouGet";
 
 export default function Landing() {
   const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 59 });
@@ -64,6 +65,7 @@ export default function Landing() {
               }
               window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
             }}
+            className="text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
           >
             Join Now
           </RainbowButton>
@@ -71,6 +73,7 @@ export default function Landing() {
       </header>
 
       <Hero />
+      <WhatYouGet />
       <Testimonials />
       <HardTruth />
       <WhatHappens />
