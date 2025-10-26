@@ -6,7 +6,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import PricingBadge from './PricingBadge';
 
 export default function Hero() {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 0 });
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -14,35 +14,8 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 2);
-
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
-
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const formatTime = () => {
-    const totalHours = (timeLeft.days * 24) + timeLeft.hours;
-    return `${totalHours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
+    return `${timeLeft.hours}hrs ${timeLeft.minutes}mins`;
   };
 
   return (
