@@ -92,7 +92,7 @@ export default function Blueprint() {
               className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/40 via-transparent to-transparent"
             />
             <span className="relative z-10 flex items-center gap-3">
-              <span>Start Your Blueprint Today</span>
+              <span>Yes, Get It!</span>
               <ArrowRight className="w-6 h-6" />
             </span>
           </a>

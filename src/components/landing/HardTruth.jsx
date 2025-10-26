@@ -100,7 +100,7 @@ export default function HardTruth() {
               }}
               className="text-base sm:text-lg md:text-xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 h-auto"
             >
-              Get the Blueprint. Get the Patients.
+              Yes, Get It!
             </RainbowButton>
           </motion.div>
         </motion.div>
