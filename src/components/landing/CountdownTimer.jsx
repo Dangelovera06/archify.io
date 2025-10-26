@@ -61,19 +61,12 @@ export default function CountdownTimer() {
           href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-3 sm:px-5 py-2 sm:py-2.5 text-black transition-all active:translate-y-px active:scale-[0.99] hover:saturate-110 hover:brightness-105 text-sm sm:text-base font-semibold whitespace-nowrap flex-shrink-0"
-          style={{
-            background: "linear-gradient(290deg, #ffd999 0%, #ffb433 30.2857%, #f5d49a 67.2878%, #ffb433 100%)",
-            boxShadow: "0 1px 0 rgba(0,0,0,.08)"
-          }}
+          className="relative inline-flex items-center justify-center gap-2 rounded-lg px-3 sm:px-5 py-2 sm:py-2.5 text-black font-bold text-sm sm:text-base whitespace-nowrap flex-shrink-0 transition-all hover:scale-105 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 shadow-[0_0_15px_rgba(250,204,21,0.5),0_0_30px_rgba(250,204,21,0.3)]"
         >
           <span 
-            className="pointer-events-none absolute inset-0 rounded-lg blur-[8px] opacity-40"
-            style={{
-              background: "radial-gradient(50% 50% at 50% 50%, #ffc766 0%, rgba(0,0,0,0) 100%)"
-            }}
+            className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-b from-white/40 via-transparent to-transparent"
           />
-          <span className="relative">Join Now</span>
+          <span className="relative z-10">Join Now</span>
         </a>
       </div>
     </div>

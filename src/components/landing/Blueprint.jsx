@@ -86,10 +86,15 @@ export default function Blueprint() {
             href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 text-black font-bold text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all duration-300 hover:scale-105"
+            className="relative inline-flex items-center gap-3 px-8 py-5 rounded-xl bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 text-black font-bold text-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(250,204,21,0.5),0_0_40px_rgba(250,204,21,0.3),0_0_60px_rgba(250,204,21,0.2)]"
           >
-            <span>Start Your Blueprint Today</span>
-            <ArrowRight className="w-6 h-6" />
+            <span 
+              className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-b from-white/40 via-transparent to-transparent"
+            />
+            <span className="relative z-10 flex items-center gap-3">
+              <span>Start Your Blueprint Today</span>
+              <ArrowRight className="w-6 h-6" />
+            </span>
           </a>
         </motion.div>
       </div>
