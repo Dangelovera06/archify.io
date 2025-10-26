@@ -58,7 +58,7 @@ export default function CountdownTimer() {
         
         {/* CTA Button */}
         <a
-          href="https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true"
+          href="https://whop.com/archify-io/social-media-dental-blueprint/"
           target="_blank"
           rel="noopener noreferrer"
           className="relative inline-flex items-center justify-center gap-2 rounded-lg px-3 sm:px-5 py-2 sm:py-2.5 text-black font-bold text-sm sm:text-base whitespace-nowrap flex-shrink-0 transition-all hover:scale-105 bg-gradient-to-b from-yellow-300 via-yellow-400 to-yellow-500 shadow-[0_0_15px_rgba(250,204,21,0.5),0_0_30px_rgba(250,204,21,0.3)]"

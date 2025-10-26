@@ -63,7 +63,7 @@ export default function Landing() {
                   content_category: 'CTA Button'
                 });
               }
-              window.open('https://whop.com/checkout/plan_uSIx6iByd4a9F?d2c=true', '_blank');
+              window.open('https://whop.com/archify-io/social-media-dental-blueprint/', '_blank');
             }}
           >
             Join Now
