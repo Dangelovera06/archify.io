@@ -6,7 +6,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import PricingBadge from './PricingBadge';
 
 export default function Hero() {
-  const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 59 });
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -14,8 +14,22 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else {
+          return { ...prev, seconds: 59 };
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const formatTime = () => {
-    return `${timeLeft.hours}hrs ${timeLeft.minutes}mins`;
+    return `${timeLeft.hours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
   };
 
   return (

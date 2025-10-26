@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
 import Hero from "../components/landing/Hero";
@@ -12,10 +12,24 @@ import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
 
 export default function Landing() {
-  const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31 });
+  const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 59 });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else {
+          return { ...prev, seconds: 59 };
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const formatTime = () => {
-    return `${timeLeft.hours}hrs ${timeLeft.minutes}mins`;
+    return `${timeLeft.hours}hrs ${timeLeft.minutes}mins ${timeLeft.seconds}secs`;
   };
 
   return (
