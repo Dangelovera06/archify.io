@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, CheckCircle, Clock, Video } from "lucide-react";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import PricingBadge from './PricingBadge';
@@ -150,6 +150,40 @@ export default function Hero() {
                 </div>
               </div>
               <CheckCircle className="hidden sm:block w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex-shrink-0 text-yellow-400" />
+            </div>
+          </motion.div>
+
+          {/* Quick Start Feature */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mb-6 md:mb-8 px-4"
+          >
+            <div className="inline-flex items-center gap-3 sm:gap-4 md:gap-6 px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-400/10 to-green-500/10 border-2 border-green-400/40 backdrop-blur-sm shadow-xl shadow-green-500/20">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-400/20 flex items-center justify-center">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-bold text-sm sm:text-base md:text-lg text-white whitespace-nowrap">
+                      Learn in Half a Day
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden sm:block w-px h-8 bg-green-400/30" />
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-400/20 flex items-center justify-center">
+                    <Video className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
+                  </div>
+                  <div className="text-left">
+                    <div className="font-bold text-sm sm:text-base md:text-lg text-white whitespace-nowrap">
+                      Film in 24 Hours
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

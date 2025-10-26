@@ -10,7 +10,6 @@ const playbookFeatures = [
   "Pre-Consult Education System",
   "Key Metrics Dashboard: Watch Time, Consults, Show Rate & Acceptance",
   "30-Day Launch Plan",
-  "Learn in half a day, film your first video in 24 hours",
   "Troubleshooting Guide"
 ];
 
