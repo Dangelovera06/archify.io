@@ -94,7 +94,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col items-center gap-4 md:gap-5 mb-6 md:mb-8"
+            className="flex flex-col items-center gap-4 md:gap-5 mb-6 md:mb-8 px-4"
           >
             <RainbowButton
               onClick={() => {
