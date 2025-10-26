@@ -86,7 +86,7 @@ export default function HardTruth() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center px-4"
           >
             <RainbowButton
               onClick={() => {
@@ -98,7 +98,7 @@ export default function HardTruth() {
                 }
                 window.open('https://whop.com/archify-io/social-media-dental-blueprint/', '_blank');
               }}
-              className="text-base sm:text-lg md:text-xl px-10 sm:px-14 md:px-20 py-6 sm:py-7 md:py-9 h-auto"
+              className="w-full sm:w-auto text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
             >
               Yes, Get It!
             </RainbowButton>
