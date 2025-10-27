@@ -2,26 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Gift } from "lucide-react";
 
-const playbookFeatures = [
-  "The Four Pillars System: Ads, Videos, Consult Flow & Case Close",
-  "Hook-Heart-Help-Hope Video Framework",
-  "YouTube, Instagram & TikTok Distribution Strategy",
-  "Video Production Standards & Visual Guidelines",
-  "Pre-Consult Education System",
-  "Key Metrics Dashboard: Watch Time, Consults, Show Rate & Acceptance",
-  "30-Day Launch Plan",
-  "Troubleshooting Guide"
-];
-
-const bonuses = [
-  {
-    title: "Ad Mastery Training",
-    description: "Complete video training on creating high-converting social authority ads"
-  },
-  {
-    title: "Done-For-You Templates",
-    description: "Ready-to-use ad and video templates to launch immediately"
-  }
+const sprintFeatures = [
+  "Weekly live coaching + content reviews",
+  "Plug-and-play video scripts, ad templates, and captions",
+  "30-min/day execution plan",
+  "Daily accountability tracker",
+  "Full compliance guardrails (HIPAA-safe)",
+  "We work with you until you get your first case"
 ];
 
 export default function WhatYouGet() {
@@ -42,11 +29,11 @@ export default function WhatYouGet() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-4 text-white">
-            Everything You Need to Pre-Sell Arches
+            What You Get in the 30-Day Sprint
           </h2>
         </motion.div>
 
-        {/* Inside The Playbook */}
+        {/* Sprint Features */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,71 +41,24 @@ export default function WhatYouGet() {
           viewport={{ once: true }}
           className="mb-12 md:mb-16"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center text-white">
-            Inside The Playbook
-          </h3>
-          
           <div className="p-6 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10">
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {playbookFeatures.map((feature, index) => (
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+              {sprintFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-2"
+                  className="flex items-start gap-3"
                 >
-                  <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-white/90 font-medium leading-snug">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-base md:text-lg text-white/90 font-medium leading-relaxed">
                     {feature}
                   </p>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </motion.div>
-
-        {/* Bonuses */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-12 md:mb-16"
-        >
-          <div className="text-center mb-6 md:mb-8">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <Gift className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm uppercase tracking-wider text-yellow-400 font-semibold">
-                Bonuses Included
-              </span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {bonuses.map((bonus, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-400/20 backdrop-blur-sm"
-              >
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
-                      {bonus.title}
-                    </h4>
-                    <p className="text-sm sm:text-base text-white/70">
-                      {bonus.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
 

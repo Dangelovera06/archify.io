@@ -60,7 +60,7 @@ export default function Hero() {
               :
             </div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              The Funnel Full-Arch Practices Use to Book 3–5 Cases Monthly
+              A 30-Day Coached Sprint to Book Your First Full-Arch Case from Social Media
             </h1>
           </motion.div>
           
@@ -70,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-5 max-w-2xl text-balance text-lg text-white/80 md:text-xl"
           >
-            A 30-Day Precision System to Pre-Sell Arches & Turn Social Media Into a Booking Engine — Even If You've Never Gone Viral
+            Live coaching, done-for-you scripts & templates, and daily accountability — We work with you until you land your first case
           </motion.p>
 
           {/* Landing Page Image */}

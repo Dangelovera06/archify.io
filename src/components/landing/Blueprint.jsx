@@ -5,18 +5,18 @@ import { ArrowRight, FileText, Target, TrendingUp } from "lucide-react";
 const steps = [
   {
     icon: FileText,
-    title: "Authority Content",
-    description: "Story-driven posts that earn patient trust."
+    title: "Week 1-2: Content & Ads",
+    description: "Launch your first authority videos and social ads with our templates and coaching."
   },
   {
     icon: Target,
-    title: "Smart Ads",
-    description: "Targeted campaigns that actually convert into consults."
+    title: "Week 3: Optimize & Scale",
+    description: "Review what's working, refine your approach, and increase reach."
   },
   {
     icon: TrendingUp,
-    title: "Predictable Growth",
-    description: "A steady stream of full-arch patients, not one-off leads."
+    title: "Week 4: Convert & Close",
+    description: "Turn consults into booked cases with our proven close system."
   }
 ];
 
@@ -38,7 +38,7 @@ export default function Blueprint() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 px-4 text-white">
-            Three Simple Steps to Predictable Implant Growth
+            How the 30-Day Sprint Works
           </h2>
         </motion.div>
 
