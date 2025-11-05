@@ -39,12 +39,12 @@ export default function ValueBreakdown() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
-          <div className="p-6 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10">
+          <div className="p-6 md:p-10 rounded-2xl bg-white/[0.03] border border-white/10">
             
             {/* Components List */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="space-y-4 mb-8">
               {components.map((component, index) => (
                 <motion.div
                   key={index}
@@ -52,14 +52,16 @@ export default function ValueBreakdown() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-center gap-3"
+                  className="flex items-center justify-between gap-4 w-full"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-base sm:text-lg text-white font-medium">
-                    {component}
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" />
+                    <span className="text-base sm:text-lg md:text-xl text-white font-medium">
+                      {component}
+                    </span>
+                  </div>
                   {component === "Community" && (
-                    <span className="text-sm text-yellow-400 font-semibold ml-auto">Priceless</span>
+                    <span className="text-base sm:text-lg text-yellow-400 font-bold">Priceless</span>
                   )}
                 </motion.div>
               ))}
