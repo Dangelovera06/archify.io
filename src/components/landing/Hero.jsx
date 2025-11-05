@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, CheckCircle, Clock, Video } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BeamsBackground } from "@/components/ui/beams-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import PricingBadge from './PricingBadge';
@@ -106,7 +106,7 @@ export default function Hero() {
                 }
                 window.open('https://whop.com/archify-io/social-media-dental-blueprint/', '_blank');
               }}
-              className="w-full sm:w-auto text-base sm:text-lg md:text-xl lg:text-2xl px-10 sm:px-14 md:px-20 lg:px-28 py-6 sm:py-7 md:py-9 lg:py-11 h-auto"
+              className="w-full sm:w-[397px] text-lg sm:text-xl font-bold h-auto py-4 sm:py-[15.6px]"
             >
               Yes, Get It!
             </RainbowButton>
@@ -130,54 +130,6 @@ export default function Hero() {
             className="mb-6 md:mb-8"
           >
             <PricingBadge />
-          </motion.div>
-
-          {/* Money Back Guarantee - EMPHASIZED */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-6 md:mb-8 px-4"
-          >
-            <div className="inline-flex items-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-xl md:rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border border-yellow-400/30 md:border-2 backdrop-blur-sm shadow-lg md:shadow-2xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transition-shadow">
-              <Shield className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 flex-shrink-0 text-yellow-400" />
-              <div className="text-left">
-                <div className="font-extrabold text-base sm:text-lg md:text-2xl lg:text-3xl text-white mb-0.5 md:mb-1">
-                  Money Back Guarantee
-                </div>
-                <div className="text-xs sm:text-sm md:text-base lg:text-lg text-yellow-200/90 font-medium">
-                  Not satisfied? Get a full refund, no questions asked.
-                </div>
-              </div>
-              <CheckCircle className="hidden sm:block w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex-shrink-0 text-yellow-400" />
-            </div>
-          </motion.div>
-
-          {/* Quick Start Feature */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-6 md:mb-8 px-4"
-          >
-            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto">
-              <div className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-xl bg-gradient-to-r from-green-500/10 via-emerald-400/10 to-green-500/10 border border-green-400/40 sm:border-2 backdrop-blur-sm shadow-lg sm:shadow-xl shadow-green-500/20">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-green-400/20 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-400" />
-                </div>
-                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
-                  Learn in Half a Day
-                </div>
-              </div>
-              <div className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-3 sm:py-4 md:py-5 rounded-xl bg-gradient-to-r from-green-500/10 via-emerald-400/10 to-green-500/10 border border-green-400/40 sm:border-2 backdrop-blur-sm shadow-lg sm:shadow-xl shadow-green-500/20">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-green-400/20 flex items-center justify-center flex-shrink-0">
-                  <Video className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-green-400" />
-                </div>
-                <div className="font-bold text-sm sm:text-base md:text-lg text-white">
-                  Make First Ad in 24hr
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
