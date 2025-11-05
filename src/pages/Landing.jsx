@@ -10,7 +10,6 @@ import EmotionalCore from "../components/landing/EmotionalCore";
 import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
-import WhatYouGet from "../components/landing/WhatYouGet";
 import ValueBreakdown from "../components/landing/ValueBreakdown";
 
 export default function Landing() {
