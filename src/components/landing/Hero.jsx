@@ -52,15 +52,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-white/90">
-              The{' '}
-              <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
-                $100K Implant Funnel
-              </span>
-              :
-            </div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              Add 10–15 Implant Consultations Every Month With a System That Runs Itself.
+              Add{' '}
+              <span className="bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
+                10–15 Implant Consultations Every Month
+              </span>
+              {' '}With a System That Runs Itself.
             </h1>
           </motion.div>
           
