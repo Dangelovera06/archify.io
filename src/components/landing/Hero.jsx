@@ -60,7 +60,7 @@ export default function Hero() {
               :
             </div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-              A 30-Day Coached Sprint to Book Your First Full-Arch Case from Social Media
+              Add 10–15 Implant Consultations Every Month With a System That Runs Itself.
             </h1>
           </motion.div>
           
@@ -70,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mx-auto mt-5 max-w-2xl text-balance text-lg text-white/80 md:text-xl"
           >
-            Live coaching, done-for-you scripts & templates, and daily accountability — We work with you until you land your first case
+            A 7-day plug-and-play system your staff can run daily to deliver 10–15 new consultations a month — no agency required.
           </motion.p>
 
           {/* Landing Page Image */}
