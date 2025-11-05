@@ -60,7 +60,7 @@ export default function ValueBreakdown() {
                       {component.name}
                     </span>
                   </div>
-                  <span className="text-base sm:text-lg md:text-xl font-bold whitespace-nowrap text-white">
+                  <span className={`text-base sm:text-lg md:text-xl font-bold whitespace-nowrap text-white ${component.name !== "Community" ? "line-through opacity-60" : ""}`}>
                     {component.value}
                   </span>
                 </motion.div>
