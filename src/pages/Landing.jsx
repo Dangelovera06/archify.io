@@ -36,7 +36,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen overflow-x-hidden w-full bg-neutral-950">
       {/* Floating Navigation Header - Visible Throughout Site */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/10 border-b border-white/5">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8 py-3 sm:py-4 gap-4">
           {/* Logo */}
           <div className="flex items-center gap-3">
@@ -46,16 +46,16 @@ export default function Landing() {
 
           {/* Timer */}
           <div className="hidden md:flex items-center gap-2 text-sm">
-            <span className="font-semibold text-white/80">
+            <span className="font-semibold text-white/60">
               Offer ends:
             </span>
-            <span className="font-extrabold tabular-nums bg-gradient-to-r from-yellow-300 via-white to-yellow-300 bg-clip-text text-transparent">
+            <span className="font-extrabold tabular-nums text-white/90">
               {formatTime()}
             </span>
           </div>
 
-          {/* Rainbow CTA Button */}
-          <RainbowButton
+          {/* White CTA Button */}
+          <button
             onClick={(e) => {
               if (window.fbq) {
                 window.fbq('track', 'Lead', {
@@ -65,9 +65,10 @@ export default function Landing() {
               }
               window.open('https://whop.com/archify-io/social-media-dental-blueprint/', '_blank');
             }}
+            className="px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-black font-bold text-sm sm:text-base rounded-lg hover:bg-white/90 transition-colors"
           >
             Join Now
-          </RainbowButton>
+          </button>
         </div>
       </header>
 
