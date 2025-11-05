@@ -5,27 +5,27 @@ import { CheckCircle2, TrendingUp, DollarSign } from "lucide-react";
 const components = [
   {
     name: "Staff Script Templates",
-    description: "Word-for-word call, text, and DM frameworks built from $1M+ in real implant campaigns. Includes rebuttals, tone training, and live-use examples so any team member can convert confidently.",
+    description: "Word-for-word call, text, and DM frameworks from $1M+ campaigns",
     value: "$697"
   },
   {
     name: "Content Calendar System",
-    description: "A 30-day plug-and-post calendar packed with patient education, emotional hooks, and authority-building video prompts. Designed for quick execution — no doctor filming required.",
+    description: "30-day plug-and-post calendar with video prompts",
     value: "$397"
   },
   {
     name: "Ad Mastery Blueprint",
-    description: "A complete $1,500 training suite of video modules showing your team exactly how to run Meta ads for implants — from targeting and ad creation to compliance-safe copywriting and optimization.",
+    description: "Complete Meta ads training for your team",
     value: "$1,497"
   },
   {
     name: "Setup & Launch Guide",
-    description: "Step-by-step video onboarding series that walks your staff through implementation, ad launch, and follow-up workflows in under 7 days — no marketing background needed.",
+    description: "7-day implementation walkthrough",
     value: "$997"
   },
   {
-    name: "Custom AI Growth Agent \"ArchAssist\"",
-    description: "Your personalized AI assistant trained on high-performing dental and implant data. Writes new ad copy, staff scripts, and captions monthly — adapting to your brand voice and local results automatically.",
+    name: "AI Growth Agent \"ArchAssist\"",
+    description: "Writes ad copy and scripts automatically",
     value: "$1,497"
   }
 ];
@@ -58,10 +58,10 @@ export default function ValueBreakdown() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mb-8 md:mb-12 max-w-4xl mx-auto"
+          className="mb-8 md:mb-12 max-w-3xl mx-auto"
         >
           <div className="p-6 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10">
-            <div className="space-y-4">
+            <div className="space-y-5">
               {components.map((component, index) => (
                 <motion.div
                   key={index}
@@ -69,20 +69,20 @@ export default function ValueBreakdown() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-start justify-between gap-3 pb-4 border-b border-white/5 last:border-0 last:pb-0"
+                  className="flex items-center justify-between gap-4"
                 >
-                  <div className="flex items-start gap-2 flex-1">
-                    <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 flex-1">
+                    <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="text-sm sm:text-base font-bold text-white mb-1">
+                      <h3 className="text-base sm:text-lg font-bold text-white mb-0.5">
                         {component.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
+                      <p className="text-sm text-white/50">
                         {component.description}
                       </p>
                     </div>
                   </div>
-                  <div className="text-base sm:text-lg font-bold text-yellow-400 whitespace-nowrap">
+                  <div className="text-lg sm:text-xl font-bold text-yellow-400 whitespace-nowrap">
                     {component.value}
                   </div>
                 </motion.div>
@@ -97,22 +97,21 @@ export default function ValueBreakdown() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-8 md:mb-12 max-w-4xl mx-auto"
+          className="mb-8 md:mb-12 max-w-3xl mx-auto"
         >
-          <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border-2 border-yellow-400/30 backdrop-blur-sm">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="text-center sm:text-left">
-                <div className="text-base sm:text-lg text-white/80 mb-1">Total Perceived Value</div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white line-through opacity-60">
-                  $5,085+
+          <div className="p-8 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/10 to-yellow-500/10 border-2 border-yellow-400/30">
+            <div className="flex items-center justify-between gap-6">
+              <div>
+                <div className="text-sm text-white/60 mb-1">Total Value</div>
+                <div className="text-3xl sm:text-4xl font-black text-white/40 line-through">
+                  $5,085
                 </div>
               </div>
-              <div className="text-center sm:text-right">
-                <div className="text-base sm:text-lg text-yellow-400 mb-1 font-semibold">Your Investment Today</div>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-black text-yellow-400">
+              <div className="text-right">
+                <div className="text-sm text-yellow-400/80 mb-1">Today</div>
+                <div className="text-5xl sm:text-6xl font-black text-yellow-400">
                   $497
                 </div>
-                <div className="text-xs sm:text-sm text-yellow-200/80 mt-1">One-Time Payment</div>
               </div>
             </div>
           </div>
@@ -124,25 +123,19 @@ export default function ValueBreakdown() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-3xl mx-auto"
         >
-          <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-600/5 border border-green-400/20 backdrop-blur-sm">
-            <div className="inline-flex items-center gap-2 mb-3">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-xs sm:text-sm uppercase tracking-wider text-green-400 font-semibold">
-                ROI Expectation
-              </span>
-            </div>
-            <p className="text-base sm:text-lg text-white mb-3">
-              If the system books <span className="font-bold text-green-400">just one implant case</span>, your practice profits:
+          <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-green-500/10 to-emerald-600/5 border border-green-400/20">
+            <p className="text-base sm:text-lg text-white/70 mb-2">
+              Book one case, profit
             </p>
-            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-green-400 mb-3">
-              $10,000–$30,000+
+            <div className="text-3xl sm:text-4xl font-black text-green-400 mb-3">
+              $10K–$30K+
             </div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/20 border border-green-400/30">
-              <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
-              <span className="text-sm sm:text-base font-bold text-white">
-                20x–60x ROI Potential
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/20">
+              <DollarSign className="w-4 h-4 text-green-400" />
+              <span className="text-sm font-bold text-white">
+                20x–60x ROI
               </span>
             </div>
           </div>
