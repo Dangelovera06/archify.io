@@ -9,7 +9,7 @@ export default function PricingBadge() {
       <span 
         className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400"
       >
-        $297
+        $497
       </span>
     </div>
   );
