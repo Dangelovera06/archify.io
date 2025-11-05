@@ -73,7 +73,6 @@ export default function Landing() {
       </header>
 
       <Hero />
-      <WhatYouGet />
       <ValueBreakdown />
       <Testimonials />
       <HardTruth />

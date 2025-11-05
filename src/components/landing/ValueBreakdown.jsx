@@ -60,7 +60,7 @@ export default function ValueBreakdown() {
                       {component.name}
                     </span>
                   </div>
-                  <span className={`text-base sm:text-lg md:text-xl font-bold whitespace-nowrap ${component.name === "Community" ? "text-yellow-400" : "text-yellow-400"}`}>
+                  <span className="text-base sm:text-lg md:text-xl font-bold whitespace-nowrap text-white">
                     {component.value}
                   </span>
                 </motion.div>
