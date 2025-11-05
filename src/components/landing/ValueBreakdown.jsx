@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { CheckCircle2, TrendingUp, DollarSign, ArrowRight } from "lucide-react";
 
 const components = [
-  "Staff Script Templates",
-  "Content Calendar System",
-  "Ad Mastery Blueprint",
-  "Setup & Launch Guide",
-  "AI Growth Agent \"ArchAssist\"",
-  "Community"
+  { name: "Staff Script Templates", value: "$697" },
+  { name: "Content Calendar System", value: "$397" },
+  { name: "Ad Mastery Blueprint", value: "$1,497" },
+  { name: "Setup & Launch Guide", value: "$997" },
+  { name: "AI Growth Agent \"ArchAssist\"", value: "$1,497" },
+  { name: "Community", value: "Priceless" }
 ];
 
 export default function ValueBreakdown() {
@@ -55,14 +55,14 @@ export default function ValueBreakdown() {
                   className="flex items-center justify-between gap-4 w-full"
                 >
                   <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0" />
                     <span className="text-base sm:text-lg md:text-xl text-white font-medium">
-                      {component}
+                      {component.name}
                     </span>
                   </div>
-                  {component === "Community" && (
-                    <span className="text-base sm:text-lg text-yellow-400 font-bold">Priceless</span>
-                  )}
+                  <span className={`text-base sm:text-lg md:text-xl font-bold whitespace-nowrap ${component.name === "Community" ? "text-yellow-400" : "text-yellow-400"}`}>
+                    {component.value}
+                  </span>
                 </motion.div>
               ))}
             </div>
