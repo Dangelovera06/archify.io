@@ -3,31 +3,12 @@ import { motion } from "framer-motion";
 import { CheckCircle2, TrendingUp, DollarSign } from "lucide-react";
 
 const components = [
-  {
-    name: "Staff Script Templates",
-    description: "Word-for-word call, text, and DM frameworks from $1M+ campaigns",
-    value: "$697"
-  },
-  {
-    name: "Content Calendar System",
-    description: "30-day plug-and-post calendar with video prompts",
-    value: "$397"
-  },
-  {
-    name: "Ad Mastery Blueprint",
-    description: "Complete Meta ads training for your team",
-    value: "$1,497"
-  },
-  {
-    name: "Setup & Launch Guide",
-    description: "7-day implementation walkthrough",
-    value: "$997"
-  },
-  {
-    name: "AI Growth Agent \"ArchAssist\"",
-    description: "Writes ad copy and scripts automatically",
-    value: "$1,497"
-  }
+  "Staff Script Templates",
+  "Content Calendar System",
+  "Ad Mastery Blueprint",
+  "Setup & Launch Guide",
+  "AI Growth Agent \"ArchAssist\"",
+  "Community"
 ];
 
 export default function ValueBreakdown() {
@@ -61,7 +42,7 @@ export default function ValueBreakdown() {
           className="mb-8 md:mb-12 max-w-3xl mx-auto"
         >
           <div className="p-6 md:p-8 rounded-2xl bg-white/[0.03] border border-white/10">
-            <div className="space-y-5">
+            <div className="grid sm:grid-cols-2 gap-4">
               {components.map((component, index) => (
                 <motion.div
                   key={index}
@@ -69,22 +50,15 @@ export default function ValueBreakdown() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex items-center justify-between gap-4"
+                  className="flex items-center gap-3"
                 >
-                  <div className="flex items-start gap-3 flex-1">
-                    <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-white mb-0.5">
-                        {component.name}
-                      </h3>
-                      <p className="text-sm text-white/50">
-                        {component.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-lg sm:text-xl font-bold text-yellow-400 whitespace-nowrap">
-                    {component.value}
-                  </div>
+                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-base sm:text-lg text-white font-medium">
+                    {component}
+                  </span>
+                  {component === "Community" && (
+                    <span className="text-sm text-yellow-400 font-semibold ml-auto">Priceless</span>
+                  )}
                 </motion.div>
               ))}
             </div>
