@@ -11,6 +11,7 @@ import Blueprint from "../components/landing/Blueprint";
 import FinalClose from "../components/landing/FinalClose";
 import Testimonials from "../components/landing/Testimonials";
 import WhatYouGet from "../components/landing/WhatYouGet";
+import ValueBreakdown from "../components/landing/ValueBreakdown";
 
 export default function Landing() {
   const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 31, seconds: 59 });
@@ -73,6 +74,7 @@ export default function Landing() {
 
       <Hero />
       <WhatYouGet />
+      <ValueBreakdown />
       <Testimonials />
       <HardTruth />
       <WhatHappens />
